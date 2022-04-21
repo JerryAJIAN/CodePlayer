@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/my_list_linearLayout">
+        android:layout_above="@+id/my_list_ll"
+        tools:ignore="UnknownId">
 
         <ListView
-            android:id="@+id/listview_my_music"
+            android:id="@+id/lv_my_music"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
@@ -21,10 +23,10 @@
         </ListView>
 
         <com.andraskindler.quickscroll.QuickScroll
-            android:id="@+id/quickscroll"
+            android:id="@+id/my_music_quickscroll"
             android:layout_width="wrap_content"
             android:paddingLeft="10dp"
-            android:layout_alignTop="@+id/listview_my_music"
+            android:layout_alignTop="@+id/lv_muisc_my_music"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>

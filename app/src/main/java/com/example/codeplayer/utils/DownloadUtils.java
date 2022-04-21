@@ -4,7 +4,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 
-import com.codingke.codingkeplayer.vo.SearchResult;
+import com.example.codeplayer.vo.SearchResult;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -25,7 +25,9 @@ import javax.xml.parsers.ParserConfigurationException;
 /**
  * descreption:
  * company: codingke.com
- * Created by vince on 15/10/14.
+ *
+ * @author vince
+ * @date 15/10/14
  */
 public class DownloadUtils {
 

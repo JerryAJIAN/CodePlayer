@@ -32,7 +32,7 @@ public class SplashActivity extends Activity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, com.astuetz.viewpager.extensions.sample.MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, com.example.codeplayer.MainActivity.class));
                 finish();
             }
         },3000);*/

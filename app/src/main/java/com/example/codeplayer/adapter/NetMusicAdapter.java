@@ -56,20 +56,20 @@ public class NetMusicAdapter extends BaseAdapter{
         if(convertView==null){
             convertView = LayoutInflater.from(ctx).inflate(R.layout.net_item_music_list,null);
             vh = new ViewHolder();
-            vh.textView1_title = (TextView) convertView.findViewById(R.id.textView1_title);
-            vh.textView2_singer = (TextView) convertView.findViewById(R.id.textView2_singer);
+            vh.net_tv_title = (TextView) convertView.findViewById(R.id.net_tv_title);
+            vh.net_tv_singer = (TextView) convertView.findViewById(R.id.net_tv_singer);
             convertView.setTag(vh);
         }
         vh = (ViewHolder) convertView.getTag();
         SearchResult result = searchResults.get(position);
-        vh.textView1_title.setText(result.getMusicName());
-        vh.textView2_singer.setText(result.getArtist());
+        vh.net_tv_title.setText(result.getMusicName());
+        vh.net_tv_singer.setText(result.getArtist());
         return convertView;
     }
 
     static class ViewHolder{
-        TextView textView1_title;
-        TextView textView2_singer;
+        TextView net_tv_title;
+        TextView net_tv_singer;
     }
 
 }

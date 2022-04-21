@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/drawable/button_bg.xml" value="0.216" />
         <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/layout-land/fragment_quick_contact.xml" value="0.3099647266313933" />
         <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/layout/my_music_list_layout.xml" value="0.33" />
+        <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/layout/net_item_music_list.xml" value="0.358695652173913" />
+        <entry key="..\:/Porject/AndroidProject/CodePlayer/app/src/main/res/layout/net_music_list.xml" value="0.17806484295845998" />
       </map>
     </option>
   </component>

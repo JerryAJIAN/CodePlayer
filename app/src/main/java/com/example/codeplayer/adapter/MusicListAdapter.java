@@ -8,9 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.andraskindler.quickscroll.Scrollable;
-import com.codingke.codingkeplayer.R;
-import com.codingke.codingkeplayer.utils.MediaUtils;
-import com.codingke.codingkeplayer.vo.Mp3Info;
 import com.example.codeplayer.R;
 import com.example.codeplayer.utils.MediaUtils;
 import com.example.codeplayer.vo.Mp3Info;
@@ -20,7 +17,9 @@ import java.util.ArrayList;
 /**
  * descreption:
  * company:
- * Created by vince on 15/9/24.
+ *
+ * @author vince
+ * @date 15/9/24
  */
 public class MusicListAdapter extends BaseAdapter implements Scrollable {
 
@@ -57,16 +56,16 @@ public class MusicListAdapter extends BaseAdapter implements Scrollable {
         if(convertView==null){
             convertView = LayoutInflater.from(ctx).inflate(R.layout.item_music_list,null);
             vh = new ViewHolder();
-            vh.textView1_title = (TextView) convertView.findViewById(R.id.textView1_title);
-            vh.textView2_singer = (TextView) convertView.findViewById(R.id.textView2_singer);
-            vh.textView3_time = (TextView) convertView.findViewById(R.id.textView3_time);
+            vh.tv_title = (TextView) convertView.findViewById(R.id.textView1_title);
+            vh.tv_singer = (TextView) convertView.findViewById(R.id.textView2_singer);
+            vh.tv_time = (TextView) convertView.findViewById(R.id.tv_time);
             convertView.setTag(vh);
         }
         vh = (ViewHolder) convertView.getTag();
         Mp3Info mp3Info = mp3Infos.get(position);
-        vh.textView1_title.setText(mp3Info.getTitle());
-        vh.textView2_singer.setText(mp3Info.getArtist());
-        vh.textView3_time.setText(MediaUtils.formatTime(mp3Info.getDuration()));
+        vh.tv_title.setText(mp3Info.getTitle());
+        vh.tv_singer.setText(mp3Info.getArtist());
+        vh.tv_time.setText(MediaUtils.formatTime(mp3Info.getDuration()));
         return convertView;
     }
 
@@ -81,9 +80,9 @@ public class MusicListAdapter extends BaseAdapter implements Scrollable {
     }
 
     static class ViewHolder{
-        TextView textView1_title;
-        TextView textView2_singer;
-        TextView textView3_time;
+        TextView tv_title;
+        TextView tv_singer;
+        TextView tv_time;
 
     }
 }

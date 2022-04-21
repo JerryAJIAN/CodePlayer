@@ -3,7 +3,9 @@ package com.example.codeplayer.utils;
 /**
  * descreption:
  * company:
- * Created by vince on 15/10/9.
+ *
+ * @author vince
+ * @date 15/10/9
  */
 public class Constant {
 

@@ -1,5 +1,6 @@
 package com.example.codeplayer.utils;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
@@ -11,8 +12,8 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 
-import com.codingke.codingkeplayer.R;
-import com.codingke.codingkeplayer.vo.Mp3Info;
+import com.example.codeplayer.R;
+import com.example.codeplayer.vo.Mp3Info;
 
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
@@ -26,8 +27,7 @@ import java.util.List;
 public class MediaUtils {
 
 	// 获取专辑封面的Uri
-	private static final Uri albumArtUri = Uri
-			.parse("content://media/external/audio/albumart");
+	private static final Uri albumArtUri = Uri.parse("content://media/external/audio/albums");
 
 	/**
 	 * 根据歌曲id查询歌曲信息
@@ -47,24 +47,15 @@ public class MediaUtils {
 
 		if (cursor.moveToNext()) {
 			mp3Info = new Mp3Info();
-			long id = cursor.getLong(cursor
-					.getColumnIndex(MediaStore.Audio.Media._ID)); // 音乐id
-			String title = cursor.getString((cursor
-					.getColumnIndex(MediaStore.Audio.Media.TITLE))); // 音乐标题
-			String artist = cursor.getString(cursor
-					.getColumnIndex(MediaStore.Audio.Media.ARTIST)); // 艺术家
-			String album = cursor.getString(cursor
-					.getColumnIndex(MediaStore.Audio.Media.ALBUM)); // 专辑
-			long albumId = cursor.getInt(cursor
-					.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID));
-			long duration = cursor.getLong(cursor
-					.getColumnIndex(MediaStore.Audio.Media.DURATION)); // 时长
-			long size = cursor.getLong(cursor
-					.getColumnIndex(MediaStore.Audio.Media.SIZE)); // 文件大小
-			String url = cursor.getString(cursor
-					.getColumnIndex(MediaStore.Audio.Media.DATA)); // 文件路径
-			int isMusic = cursor.getInt(cursor
-					.getColumnIndex(MediaStore.Audio.Media.IS_MUSIC)); // 是否为音乐
+			long id = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media._ID)); // 音乐id
+			String title = cursor.getString((cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))); // 音乐标题
+			String artist = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST)); // 艺术家
+			String album = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM)); // 专辑
+			long albumId = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID));
+			long duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION)); // 时长
+			long size = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.SIZE)); // 文件大小
+			String url = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)); // 文件路径
+			int isMusic = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media.IS_MUSIC)); // 是否为音乐
 			if (isMusic != 0) { // 只把音乐添加到集合当中
 				mp3Info.setId(id);
 				mp3Info.setTitle(title);
@@ -209,6 +200,7 @@ public class MediaUtils {
 	 * @param context
 	 * @return
 	 */
+	@SuppressLint("ResourceType")
 	public static Bitmap getDefaultArtwork(Context context, boolean small) {
 		Options opts = new Options();
 		opts.inPreferredConfig = Bitmap.Config.RGB_565;

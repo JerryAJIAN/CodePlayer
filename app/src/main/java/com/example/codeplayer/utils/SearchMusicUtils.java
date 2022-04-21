@@ -5,6 +5,7 @@ import android.os.Message;
 import android.text.TextUtils;
 
 import com.codingke.codingkeplayer.vo.SearchResult;
+import com.example.codeplayer.vo.SearchResult;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -40,7 +41,7 @@ public class SearchMusicUtils {
 		
 		return sInstance;
 	}
-
+//线程
 	private SearchMusicUtils() throws ParserConfigurationException {
 		mThreadPool = Executors.newSingleThreadExecutor();
 	}

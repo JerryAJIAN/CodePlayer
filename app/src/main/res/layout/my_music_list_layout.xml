@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/my_list_linearLayout">
+
+        <ListView
+            android:id="@+id/listview_my_music"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:listSelector="@drawable/list_item_selector"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        </ListView>
+
+        <com.andraskindler.quickscroll.QuickScroll
+            android:id="@+id/quickscroll"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_alignTop="@+id/listview_my_music"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout_list_player"
+        android:background="#2d2c2c"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/list_iv_album"
+            android:src="@mipmap/app_logo2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="歌名"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@android:color/white"
+                android:id="@+id/list_tv_songName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="歌手"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/list_tv_singer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_iv_play_pause"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/play"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lit_iv_next"
+                android:src="@drawable/button_next_bg"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

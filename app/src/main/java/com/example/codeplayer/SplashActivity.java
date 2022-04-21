@@ -24,7 +24,7 @@ public class SplashActivity extends Activity {
                 //去标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
                 setContentView(R.layout.activity_splash);
-
+/*
         Intent intent = new Intent(this,PlayService.class);
         startService(intent);
 
@@ -32,10 +32,10 @@ public class SplashActivity extends Activity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, com.astuetz.viewpager.extensions.sample.MainActivity.class));
                 finish();
             }
-        },3000);
+        },3000);*/
     }
 
 }

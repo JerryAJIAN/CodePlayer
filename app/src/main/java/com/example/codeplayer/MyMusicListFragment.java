@@ -23,6 +23,7 @@ import com.example.codeplayer.adapter.MusicListAdapter;
 import com.example.codeplayer.utils.MediaUtils;
 import com.example.codeplayer.vo.Mp3Info;
 
+import java.nio.channels.Selector;
 import java.util.ArrayList;
 
 /**
@@ -109,7 +110,7 @@ public class MyMusicListFragment extends Fragment implements AdapterView.OnItemC
         }
 
         private void initQuickscroll() {
-            quickscroll.init(QuickScroll.TYPE_POPUP_WITH_HANDLE, listView_my_music, myMusicListAdapter, QuickScroll.STYLE_HOLO);
+            quickscroll.init(QuickScroll.TYPE_POPUP_WITH_HANDLE, listview_my_music, myMusicListAdapter, QuickScroll.STYLE_HOLO);
             quickscroll.setFixedSize(1);
             quickscroll.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 48);
 //        quickscroll.setIndicatorColor(bgColor, bgColor, Color.WHITE);

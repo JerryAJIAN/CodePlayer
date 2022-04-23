@@ -22,6 +22,7 @@ import com.codingke.codingkeplayer.adapter.MusicListAdapter;
 import com.codingke.codingkeplayer.utils.MediaUtils;
 import com.codingke.codingkeplayer.vo.Mp3Info;
 import com.example.codeplayer.adapter.MusicListAdapter;
+import com.example.codeplayer.utils.MediaUtils;
 import com.example.codeplayer.vo.Mp3Info;
 import com.lidroid.xutils.db.sqlite.Selector;
 import com.lidroid.xutils.exception.DbException;
@@ -63,14 +64,14 @@ public class MyMusicListFragment extends Fragment implements OnItemClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.my_music_list_layout,null);
-        listView_my_music = (ListView) view.findViewById(R.id.listView_my_music);
-        imageView_album = (ImageView) view.findViewById(R.id.imageView_album);
-        imageView2_play_pause = (ImageView) view.findViewById(R.id.imageView2_play_pause);
-        imageView3_next = (ImageView) view.findViewById(R.id.imageView3_next);
-        textView_songName = (TextView) view.findViewById(R.id.textView_songName);
-        textView2_singer = (TextView) view.findViewById(R.id.textView2_singer);
+        listView_my_music = (ListView) view.findViewById(R.id.lv_my_music);
+        imageView_album = (ImageView) view.findViewById(R.id.iv_album);
+        imageView2_play_pause = (ImageView) view.findViewById(R.id.list_iv_play_pause);
+        imageView3_next = (ImageView) view.findViewById(R.id.lit_iv_next);
+        textView_songName = (TextView) view.findViewById(R.id.list_tv_songName);
+        textView2_singer = (TextView) view.findViewById(R.id.list_tv_singer);
 
-        quickscroll = (QuickScroll) view.findViewById(R.id.quickscroll);
+        quickscroll = (QuickScroll) view.findViewById(R.id.my_music_quickscroll);
         listView_my_music.setOnItemClickListener(this);
         imageView2_play_pause.setOnClickListener(this);
         imageView3_next.setOnClickListener(this);

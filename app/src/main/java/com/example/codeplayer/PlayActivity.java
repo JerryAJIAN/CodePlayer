@@ -20,6 +20,7 @@ import com.codingke.codingkeplayer.utils.MediaUtils;
 import com.codingke.codingkeplayer.utils.SearchMusicUtils;
 import com.codingke.codingkeplayer.vo.Mp3Info;
 import com.codingke.codingkeplayer.vo.SearchResult;
+import com.example.codeplayer.vo.Mp3Info;
 import com.lidroid.xutils.db.sqlite.Selector;
 import com.lidroid.xutils.exception.DbException;
 

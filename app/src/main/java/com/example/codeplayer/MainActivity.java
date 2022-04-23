@@ -42,6 +42,8 @@ import com.astuetz.PagerSlidingTabStrip;
 public class MainActivity extends FragmentActivity {
 
 	private final Handler handler = new Handler();
+	public PlayService playService;
+	public CodePlayerApp app;
 
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
@@ -178,6 +180,12 @@ public class MainActivity extends FragmentActivity {
 			handler.removeCallbacks(what);
 		}
 	};
+
+	public void bindPlayService() {
+	}
+
+	public void unbindPlayService() {
+	}
 
 	public class MyPagerAdapter extends FragmentPagerAdapter {
 

@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 
-import com.codingke.codingkeplayer.vo.SearchResult;
 import com.example.codeplayer.vo.SearchResult;
 
 import org.jsoup.Jsoup;

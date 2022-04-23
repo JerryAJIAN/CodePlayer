@@ -1,8 +1,10 @@
 package com.example.codeplayer;
 
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +16,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-
+import com.codingke.codingkeplayer.adapter.NetMusicAdapter;
+import com.codingke.codingkeplayer.utils.AppUtils;
+import com.codingke.codingkeplayer.utils.Constant;
+import com.codingke.codingkeplayer.utils.SearchMusicUtils;
+import com.codingke.codingkeplayer.vo.SearchResult;
 import com.example.codeplayer.adapter.NetMusicAdapter;
-import com.example.codeplayer.utils.AppUtils;
-import com.example.codeplayer.utils.Constant;
-import com.example.codeplayer.utils.SearchMusicUtils;
 import com.example.codeplayer.vo.SearchResult;
 
 import org.jsoup.Jsoup;
@@ -29,12 +31,12 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-;
-
 /**
- * @author ASUS_JAJIAN
+ * descreption:
+ * company:
+ * Created by vince on 15/9/24.
  */
-public class NetMusicListFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener{
+public class NetMusicListFragment extends Fragment implements View.OnClickListener,AdapterView.OnItemClickListener{
 
     private MainActivity mainActivity;
     private ListView listView_net_music;
@@ -195,4 +197,5 @@ public class NetMusicListFragment extends Fragment implements View.OnClickListen
             listView_net_music.setVisibility(View.VISIBLE);
         }
     }
+
 }

@@ -47,6 +47,8 @@ public class MainActivity extends FragmentActivity {
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
 	private MyMusicListFragment myMusicListFragment;
+	private NetMusicListFragment netMusicListFragment;
+
 
 	private Drawable oldBackground = null;
 	private int currentColor = 0xFF666666;
@@ -209,11 +211,6 @@ public class MainActivity extends FragmentActivity {
 				}
 //                System.out.println("netMusicListFragment");
 				return netMusicListFragment;
-			}else if (position == 2) {//MV
-				if (netMusicListFragment == null) {
-					myMVListFragment = MyMVListFragment.newInstance();
-				}
-
 			}
 			return null;
 		}

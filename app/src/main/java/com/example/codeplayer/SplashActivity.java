@@ -24,7 +24,7 @@ public class SplashActivity extends Activity {
                 //去标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
                 setContentView(R.layout.activity_splash);
-/*
+
         Intent intent = new Intent(this,PlayService.class);
         startService(intent);
 
@@ -35,7 +35,7 @@ public class SplashActivity extends Activity {
                 startActivity(new Intent(SplashActivity.this, com.example.codeplayer.MainActivity.class));
                 finish();
             }
-        },3000);*/
+        },3000);
     }
 
 }

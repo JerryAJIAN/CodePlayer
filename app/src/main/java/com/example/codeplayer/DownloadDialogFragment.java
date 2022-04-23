@@ -8,15 +8,15 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.widget.Toast;
 
-import com.codingke.codingkeplayer.utils.DownloadUtils;
-import com.codingke.codingkeplayer.vo.SearchResult;
 import com.example.codeplayer.utils.DownloadUtils;
 import com.example.codeplayer.vo.SearchResult;
 
 /**
  * descreption:
  * company: codingke.com
- * Created by vince on 15/10/13.
+ *
+ * @author vince
+ * @date 15/10/13
  */
 public class DownloadDialogFragment extends DialogFragment{
 
